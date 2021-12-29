@@ -20,8 +20,10 @@ for _ in range(word_length):
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
+    #repeating letters
     if guess in display:
       print(f"You've already guessed {guess}")
+
     #Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]
@@ -46,3 +48,5 @@ while not end_of_game:
 
     #stage image
     print(stages[lives])
+if end_of_game == True:
+  print(f" The word was \"{chosen_word}\"")
